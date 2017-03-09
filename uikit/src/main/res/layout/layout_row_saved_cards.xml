@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="?android:selectableItemBackground"
@@ -16,12 +17,12 @@
             android:id="@+id/image_arrow_right"
             android:layout_width="@dimen/twenty_four_dp"
             android:layout_height="@dimen/twenty_four_dp"
-            android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:alpha="0.3"
-            android:layout_marginRight="@dimen/eight_dp"
             android:layout_marginEnd="@dimen/eight_dp"
+            android:layout_marginRight="@dimen/eight_dp"
+            android:alpha="0.3"
             android:src="@drawable/ic_arrow_right" />
 
         <ImageView
@@ -31,17 +32,20 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/four_dp"
             android:layout_marginRight="@dimen/four_dp"
-            android:layout_toLeftOf="@id/image_arrow_right"
+            android:layout_toLeftOf="@+id/image_card_offer"
             android:src="@drawable/ic_visa" />
 
-        <ImageView
+        <com.midtrans.sdk.uikit.widgets.AspectRatioImageView
             android:id="@+id/image_card_offer"
             android:layout_width="@dimen/twenty_four_dp"
             android:layout_height="@dimen/twenty_four_dp"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/eight_dp"
-            android:layout_toLeftOf="@id/image_card_type"
-            android:src="@drawable/ic_promo" />
+            android:layout_marginLeft="@dimen/four_dp"
+            android:layout_toLeftOf="@id/image_arrow_right"
+            android:background="?selectableItemBackground"
+            android:src="@drawable/ic_promo"
+            android:visibility="gone"
+            tools:visibility="visible" />
 
         <TextView
             android:id="@+id/text_saved_card_name"
